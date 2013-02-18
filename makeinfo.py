@@ -9,7 +9,6 @@ pages = document.getNumPages()
 out = open(filename+".info", 'w')
 
 out.write("""import json
-# from markdown import markdown
 
 def UpdateInfo():
     global FileName, FileList, PageCount
@@ -18,7 +17,6 @@ def UpdateInfo():
     global RTrunning, RTrestart, StartTime, PageEnterTime, CurrentTime
 
     io = open('"""+path.dirname(filename)+"""./json.txt', 'w')
-    #json.dump(({"page_count": PageCount, "current_page": Pcurrent, "previous_page": Pnext, "start_time": StartTime, "pageenter_time": PageEnterTime, "current_time": CurrentTime, "notes": markdown(PageProps[Pcurrent]['notes'])}), io)
     json.dump(({"page_count": PageCount, "current_page": Pcurrent, "previous_page": Pnext, "start_time": StartTime, "pageenter_time": PageEnterTime, "current_time": CurrentTime, "notes": PageProps[Pcurrent]['notes']}), io)
     io.close()
 
