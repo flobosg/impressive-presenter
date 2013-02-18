@@ -3,7 +3,7 @@
 
 ![](https://dl.dropbox.com/u/1116031/images/impressive-presenter.png)
 
-Based on [Seppe vanden Broucke's code][vandenbroucke09].
+Based on [Seppe vanden Broucke's code][vandenbroucke].
 
 ## Usage
 This workflow is recommended:
