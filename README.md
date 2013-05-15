@@ -5,6 +5,9 @@
 
 Based on [Seppe vanden Broucke's code][vandenbroucke].
 
+## Dependencies
+* pyPdf
+
 ## Usage
 This workflow is recommended:
 
