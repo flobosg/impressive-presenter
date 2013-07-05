@@ -10,17 +10,17 @@ pages = document.getNumPages()
 with open(filename+".info", 'w') as out:
     out.write("""import json
 
-    def UpdateInfo():
-        global FileName, FileList, PageCount
-        global DocumentTitle
-        global Pcurrent, Pnext, Tcurrent, Tnext, InitialPage
-        global RTrunning, RTrestart, StartTime, PageEnterTime, CurrentTime
+def UpdateInfo():
+    global FileName, FileList, PageCount
+    global DocumentTitle
+    global Pcurrent, Pnext, Tcurrent, Tnext, InitialPage
+    global RTrunning, RTrestart, StartTime, PageEnterTime, CurrentTime
 
-        with open('"""+path.dirname(filename)+"""/json.txt', 'w') as io:
-            json.dump(({"page_count": PageCount, "current_page": Pcurrent, "previous_page": Pnext, "start_time": StartTime, "pageenter_time": PageEnterTime, "current_time": CurrentTime, "notes": PageProps[Pcurrent]['notes']}), io)
+    with open('"""+path.dirname(filename)+"""/json.txt', 'w') as io:
+        json.dump(({"page_count": PageCount, "current_page": Pcurrent, "previous_page": Pnext, "start_time": StartTime, "pageenter_time": PageEnterTime, "current_time": CurrentTime, "notes": PageProps[Pcurrent]['notes']}), io)
 
-    PageProps = {
-    """)
+PageProps = {
+""")
 
     for i in range(1,pages + 1):
         if i < pages:
