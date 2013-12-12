@@ -8,6 +8,9 @@ document = PdfFileReader(file(filename, "rb"))
 pages = document.getNumPages()
 
 with open(filename+".info", 'w') as out:
+    path = path.dirname(filename)
+    if path:
+        path = path + '/'
     out.write("""import json
 
 def UpdateInfo():
@@ -16,7 +19,7 @@ def UpdateInfo():
     global Pcurrent, Pnext, Tcurrent, Tnext, InitialPage
     global RTrunning, RTrestart, StartTime, PageEnterTime, CurrentTime
 
-    with open('"""+path.dirname(filename)+"""/json.txt', 'w') as io:
+    with open('"""+path+"""json.txt', 'w') as io:
         json.dump(({"page_count": PageCount, "current_page": Pcurrent, "previous_page": Pnext, "start_time": StartTime, "pageenter_time": PageEnterTime, "current_time": CurrentTime, "notes": PageProps[Pcurrent]['notes']}), io)
 
 PageProps = {
