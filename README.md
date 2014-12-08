@@ -6,7 +6,8 @@
 Based on [Seppe vanden Broucke's code][vandenbroucke].
 
 ## Dependencies
-* pyPdf
+* [pyPdf][pypdf]
+* [ImageMagick][imagemagick]
 
 ## Usage
 This workflow is recommended:
@@ -17,6 +18,8 @@ This workflow is recommended:
 4. At the time of your presentation, open `presenter.html` in your laptop screen. In Chrome, you'll need to execute the browser with the `--allow-file-access-from-files` flag, otherwise it won't work. This flag could change without notice, so be careful and check the [documentation][chrome-flags]. Or just use another browser.
 5. In the main screen, start your presentation with Impressive. If everything goes well, `presenter.html` should update its info.
 
-[vandenbroucke]: http://blog.macuyiko.com/2009/12/buillding-presenter-view-for-linux.html
+[vandenbroucke]: http://blog.macuyiko.com/post/2009/building-a-presenter-view-for-linux.html
+[pypdf]: https://pypi.python.org/pypi/pyPdf/
+[imagemagick]: http://www.imagemagick.org/
 [info-scripts]: http://impressive.sourceforge.net/manual.php#scripts
 [chrome-flags]: http://peter.sh/experiments/chromium-command-line-switches/
